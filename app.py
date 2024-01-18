@@ -23,7 +23,7 @@ PINECONE_API_ENV = os.getenv("PINECONE_API_ENV")
 # Initializing the Pinecone
 pinecone.init(api_key=PINECONE_API_KEY,environment=PINECONE_API_ENV)
 
-index_name = 'datascience-pilot'
+index_name = os.getenv("PINECONE_INDEX_NAME")
 
 def download_hugging_face_embeddings():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
