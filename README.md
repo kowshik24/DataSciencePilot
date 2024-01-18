@@ -17,29 +17,34 @@ To get started with DataSciencePilot, follow these simple steps:
    ```bash
    git clone https://github.com/kowshik24/DataSciencePilot.git
 
-2. **Create a Virtual Environment**: Create a virtual environment using the following command:
+2. **Download the model**: Download the model from huggingface from here: https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q4_0.bin then place it in the `model` folder. And on the `app.py` file change the model path to the path of the model you just downloaded.
+   ```bash
+   llm=CTransformers(model="model/llama-2-7b-chat.ggmlv3.q4_0.bin")
+   ```
+
+3. **Create a Virtual Environment**: Create a virtual environment using the following command:
    ```bash
    python3 -m venv env
    ```
-3. **Activate the Virtual Environment**: Activate the virtual environment using the following command:
+4. **Activate the Virtual Environment**: Activate the virtual environment using the following command:
    ```bash
    source env/bin/activate
    ```
-4. **Install Dependencies**: Install the required dependencies using the following command:
+5. **Install Dependencies**: Install the required dependencies using the following command:
    ```bash
    pip install -r requirements.txt
    ```
-5. **.env File**: Create a `.env` file in the root directory of the project and add the following environment variables:
+6. **.env File**: Create a `.env` file in the root directory of the project and add the following environment variables:
    ```bash
    PINECONE_API_KEY=<your-pinecone-api-key>
    PINECONE_API_ENV=<your-pinecone-api-env>
    PINECONE_INDEX_NAME=<your-pinecone-index-name>
    ```
-6. **Run the Application**: Run the application using the following command:
+7. **Run the Application**: Run the application using the following command:
    ```bash
     python app.py
     ```
-7. **Open the Application**: Open the application in your browser using the following URL:
+8. **Open the Application**: Open the application in your browser using the following URL:
     ```bash
     http://localhost:5120/
     ```
